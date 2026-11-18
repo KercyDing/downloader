@@ -1,0 +1,14 @@
+.{
+    .name = .downloader,
+    .version = "0.0.1",
+    .fingerprint = 0xcbd17eed78c51fae,
+    .minimum_zig_version = "0.17.1",
+    .dependencies = .{},
+    .paths = .{
+        "build.zig",
+        "build.zig.zon",
+        "src",
+        "LICENSE",
+        "README.md",
+    },
+}

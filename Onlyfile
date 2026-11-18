@@ -1,0 +1,26 @@
+!version 0.5
+
+[help] Run tests
+[pass] Tests passed.
+[fail] Tests failed.
+test():
+    zig build test
+
+[help] Build in release mode
+[desc] Run `only build-release false` to turn off the strip.
+[pass] Release build complete.
+[fail] Release build failed.
+build-release(strip = "true"):
+    zig build -Doptimize=ReleaseFast -Dstrip={{strip}}
+
+[help] Format all Zig files
+[pass] Formatting complete.
+[fail] Formatting failed.
+fmt():
+    zig fmt .
+
+[help] Clean cache and build output
+[pass] Clean complete.
+[fail] Clean failed.
+clean():
+    rm -rf .zig-cache zig-out zig-pkg
